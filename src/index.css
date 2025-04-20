@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background-light: #ffffff;
+  --background-dark: #0A0A0A;
+  --text-light: #1a1a1a;
+  --text-dark: #ffffff;
+}
+
+body {
+  @apply transition-colors duration-200;
+}
+
+.dark {
+  color-scheme: dark;
+  --bg-primary: var(--background-dark);
+  --text-primary: var(--text-dark);
+}
+
+.light {
+  color-scheme: light;
+  --bg-primary: var(--background-light);
+  --text-primary: var(--text-light);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
